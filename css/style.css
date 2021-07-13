@@ -1,0 +1,30 @@
+body *{
+    /*every element within the body */
+    box-sizing: border-box;
+}
+
+h1 {
+    font: 30px black;
+    font-weight: bolder;
+}
+
+h2 {
+    font: 24px green;
+    font-weight: bolder;
+}
+
+img {
+    width: 30%;
+}
+
+header {
+    border: .1px  gray;
+    margin: 5px;
+    padding: 10px;
+}
+
+section {
+    border: .1px solid gray;
+    margin: 30px 5px;
+    padding: 10px;
+}
