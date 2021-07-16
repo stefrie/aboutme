@@ -1,6 +1,6 @@
 body *{
     /*every element within the body */
-    box-sizing: border-box;
+    background-color: #EDFAFF;
 }
 
 h1 {
@@ -13,8 +13,8 @@ h2 {
     font-weight: bolder;
 }
 
-img {
-    width: 30%;
+section img {
+    width: 50%;
 }
 
 header {
@@ -25,8 +25,25 @@ header {
 
 section {
     border: .1px solid gray;
-    margin: 30px 5px;
+    margin: 10px 5px;
     padding: 10px;
+}
+
+article {
+    width: 30%;
+    float: left;
+    margin: 10px;
+    padding: 20px;
+}
+
+article:nth-child(1), article:nth-child(2) {
+    margin-right: 5%;
+}
+
+article img, article ul, article h2 {
+    width: 75%;
+    margin: 10px auto 5px auto;
+    display: block;
 }
 
 ul {
