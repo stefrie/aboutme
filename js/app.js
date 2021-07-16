@@ -2,59 +2,23 @@
 
 // ask a few questions and use if statements (conditional statements) or switch statements to reply with a unique alert;
 let score = 0;
-// Question 1
-let imFromOrig = prompt('Am I from Ohio?');
-let imFrom = imFromOrig.toLowerCase();
-console.log('Am I from Ohio? User guess: ' + imFrom);
-if (imFrom === 'yes' || imFrom === 'y') {
-    alert('You\'re right! I\'m from the Heartland. :)');
-    score++;
-} else {
-    alert('Wrong-o. You have 49 more guesses. (Just kidding, I won\'t put you through that.');
-}
 
-// Question 2
-let petsOrig = prompt('Do I have any pets?');
-let pets = petsOrig.toLowerCase();
-console.log('Do I have pets? User guess: ' + pets);
-if (pets === 'no' || pets === 'n') {
-    alert('Correct!');
-    score++;
-} else {
-    alert('As much as I love animals, alas - I do not have any pets.');
-}
+yesNoQuestion(prompt('Am I from Ohio?'), 'You\'re right! I\'m from the Heartland. :)', 'Wrong-o. You have 49 more guesses. (Just kidding, I won\'t put you through that.', 'yes', 'y');
+yesNoQuestion(prompt('Do I have any pets?'), 'Correct!', 'As much as I love animals, alas - I do not have any pets.', 'no', 'n');
+yesNoQuestion(prompt('Is my favorite color pink?'), 'Correct! Pink is not my favorite color.', 'Incorrect - my favorite color is GREEEEEEEN.', 'no', 'n');
+yesNoQuestion(prompt('Do I have any tattoos?'), 'Correct! I just got my first (but not last) tattoo this year.', 'Incorrect...I just got my very first tattoo this year.', 'yes', 'y');
+yesNoQuestion(prompt('Do I have any kids?'), 'Winner winner chicken dinner!', 'Incorrect - I have one (amazing) daughter.', 'yes', 'y');
 
-// Question 3
-let favColorOrig = prompt('Is my favorite color pink?');
-let favColor = favColorOrig.toLowerCase();
-console.log('Is pink my favorite color? User guess: ' + favColor);
-if (favColor === 'no' || favColor === 'n') {
-    alert('Correct! Pink is not my favorite color.');
-    score++;
-} else {
-    alert('Incorrect - my favorite color is GREEEEEEEN.');
-}
+function yesNoQuestion(prompt, correctResponse, incorrectResponse, correctAnswer1, correctAnswer2){
+    let promptLowerCase = prompt.toLowerCase();
+    console.log(prompt + ' ' + promptLowerCase);
 
-// Question 4
-let tattooOrig = prompt('Do I have any tattoos?');
-let tattoo = tattooOrig.toLowerCase();
-console.log('Do I have any tattoos? User guess: ' + tattoo);
-if (tattoo === 'yes' || tattoo === 'ny') {
-    alert('Correct! I just got my first (but not last) tattoo this year.');
-    score++;
-} else {
-    alert('Incorrect...I just got my very first tattoo this year.');
-}
-
-// Question 5
-let kiddosOrig = prompt('Do I have any kids?');
-let kiddos = kiddosOrig.toLowerCase();
-console.log('Do I havey kids? User guess: ' + kiddos);
-if (kiddos === 'no' || kiddos === 'n') {
-    alert('Incorrect - I have one (amazing) daughter.');
-} else {
-    alert('Winner winner chicken dinner!');
-    score++;
+    if (promptLowerCase === correctAnswer1 || promptLowerCase === correctAnswer2) {
+        alert(correctResponse);
+        score++;
+    } else {
+        alert(incorrectResponse);
+    }
 }
 
 // Add a 6th question to the guessing game that takes in a numeric input by prompting the user to guess a number.
