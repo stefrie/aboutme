@@ -6,10 +6,11 @@ body *{
 h1 {
     font: 30px black;
     font-weight: bolder;
+    text-align: center;
 }
 
-h2 {
-    font: 24px green;
+section h2 {
+    font: 24px red;
     font-weight: bolder;
 }
 
@@ -26,14 +27,14 @@ header {
 section {
     border: .1px solid gray;
     margin: 10px 5px;
-    padding: 10px;
+    padding: 2px;
 }
 
 article {
     width: 30%;
     float: left;
-    margin: 10px;
-    padding: 20px;
+    margin: 5px;
+    padding: 10px;
 }
 
 article:nth-child(1), article:nth-child(2) {
